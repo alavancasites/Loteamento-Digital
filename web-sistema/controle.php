@@ -1,9 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
-include_once("gzip/gzipHTML.php");
-include_once('extranet/autoload.php');
-session_start();
+
 function iniciarSessao($model){
 	$_SESSION['hash_model_sessao'] = md5(md5(Util::soNumero($model->cpf_cnpj)).'91283hs85427h'.$model->senha);
 }

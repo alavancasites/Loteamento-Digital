@@ -1,61 +1,113 @@
-<?
-/*********************************************************
-*Controle de versao: 2.2
-*********************************************************/
-//include("gzip/gzipHTML.php");
-include_once('extranet/autoload.php');
-$criteria_files = new CDbCriteria();
-$criteria_files->addCondition("t.ativo = '1'");
-$criteria_files->order = 'posicao asc';
-$categorias = ArquivoCategoria::model()->findAll($criteria_files);
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head profile="http://gmpg.org/xfn/11">
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title><?php echo Yii::app()->sistema_nome; ?> - Gerenciamento de terrenos</title>
-<?php include ("header.php");?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dashboard 1 | Velonic - Responsive Bootstrap 4 Admin Dashboard</title>
+    <?php include('header.php'); ?>
+
 </head>
-<body>
-    <div id="topo"><?php include ("topo.php");?></div>
-    <div id="wrapper" class="internas">
-        <div class="caminho"><div class="container container-1200"><a href="terrenos">Inicial</a><i class="icon-right"></i>Downloads</div></div>
-        <div class="container container-1200">
-            <?php //include ("avisos_lista.php");?>
-            <h2 class="tit mt50">DOWNLOADS</h2>
-            <div class="downloads_lista mt80">
-                <?
-                if(count($categorias)){
 
-                    foreach ($categorias as $categoria) {
-                        $criteria_files = new CDbCriteria();
-                        $criteria_files->addCondition("t.ativo = '1'");
-                        $criteria_files->addCondition("t.idarquivo_categoria = '".$categoria->idarquivo_categoria."'");
-                        $arquivos = Arquivo::model()->findAll($criteria_files);
+<body data-layout="horizontal">
 
-                        if(count($arquivos)){
+    <!-- Begin page -->
+    <div id="wrapper">
 
+        <!-- Navigation Bar-->
+        <?php
+        include('topo.php');
+        ?>
+        <!-- End Navigation Bar-->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row mt-3">
+                        <div class="col-lg-12">
+
+                            <h2 class="text-center tit">DOWNLOADS</h2>
+                            <hr>
+                            <?php
+                            if (count($categorias)) {
+
+                                foreach ($categorias as $categoria) {
+                                    $criteria_files = new CDbCriteria();
+                                    $criteria_files->addCondition("t.ativo = '1'");
+                                    $criteria_files->addCondition("t.idarquivo_categoria = '" . $categoria->idarquivo_categoria . "'");
+                                    $arquivos = Arquivo::model()->findAll($criteria_files);
+
+                                    if (count($arquivos)) {
                             ?>
-                            <h3><?=Util::formataTexto($categoria->nome)?></h3>
-                            <?
-                            foreach ($arquivos as $arquivo) {
+                                        <h3><?= Util::formataTexto($categoria->nome) ?></h3>
+                                        <div class="row">
+                                            <?
+                                            foreach ($arquivos as $arquivo) {
+                                            ?>
+                                                <div class="col-md-4">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <a href="extranet/uploads/Arquivo/<?= $arquivo->arquivo ?>" target="_blank" class="bt_degrade coluna um-terco"><?= Util::formataTexto($arquivo->titulo) ?></a>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            <?php
+                                            }
+                                            ?>
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
+                                <?php
+
+                                }
+                            } else {
                                 ?>
-                                <a href="extranet/uploads/Arquivo/<?=$arquivo->arquivo?>" target="_blank" class="bt_degrade coluna um-terco"><?=Util::formataTexto($arquivo->titulo)?></a>
-                                <?
+                                <p>
+                                    <em>Nenhum arquivo disponível</em>
+                                </p>
+                            <?php
                             }
                             ?>
-                            <div class="clear"></div>
-                            <?
-                        }
-                    }
-                }else{
-                    echo 'Nenhum arquivo disponivel';
-                }
-                ?>
+
+                        </div>
+
+                    </div>
+                    <!-- End row -->
+
+                </div>
+                <!-- end container-fluid -->
+
             </div>
+            <!-- end content -->
+
+
+
+            <!-- Footer Start -->
+            <?php include('rodape.php') ?>
+            <!-- end Footer -->
+
         </div>
-        <div><?php include ("rodape.php");?></div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
     </div>
-    <?php include ("scripts.php");?>
+    <!-- END wrapper -->
+
+
+    <?php include('scripts.php') ?>
+
 </body>
+
 </html>

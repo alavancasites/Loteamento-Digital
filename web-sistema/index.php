@@ -1,4 +1,10 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+include_once("gzip/gzipHTML.php");
+include_once('extranet/autoload.php');
+session_start();
+
 include_once("RequestManager.php");
 $rotas = array(
 	//'/cadastro'=> 'cadastro.php',

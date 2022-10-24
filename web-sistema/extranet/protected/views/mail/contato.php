@@ -16,23 +16,23 @@
           <table width="100%" border="0" cellspacing="0" cellpadding="4">
             <tr class="fundo">
               <td width="23%"><strong>Nome:</strong></td>
-              <td width="77%"><?=htmlentities($contato->nome);?></td>
+              <td width="77%"><?=Util::formataTexto($contato->nome);?></td>
             </tr>
             <tr>
               <td><strong>E-mail:</strong></td>
-              <td><?=htmlentities($contato->email);?></td>
+              <td><?=Util::formataTexto($contato->email);?></td>
             </tr>
             <tr class="fundo">
               <td><strong>Telefone:</strong></td>
-              <td><?=htmlentities($contato->telefone);?></td>
+              <td><?=Util::formataTexto($contato->telefone);?></td>
             </tr>
             <tr>
               <td><strong>Assunto:</strong></td>
-              <td><?=htmlentities($contato->assunto);?></td>
+              <td><?=Util::formataTexto($contato->assunto);?></td>
             </tr>
             <tr class="fundo">
               <td><strong>Mensagem</strong></td>
-              <td><?=htmlentities($contato->mensagem);?></td>
+              <td><?=Util::formataTexto($contato->mensagem);?></td>
             </tr>
           </table>
         </div>

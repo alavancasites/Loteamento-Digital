@@ -23,7 +23,7 @@
           <dt><?php echo $form->labelEx($model,'idempreendimento',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->dropDownList($model, 'idempreendimento', GxHtml::listDataEx(Empreendimento::model()->findAllAttributes(null, true)), array('class' => 'input-xxlarge','empty'=>'Selecione...')); ?>
+		  	<?php echo $form->dropDownList($model, 'idempreendimento', GxHtml::listDataEx(Empreendimento::model()->findAllAttributes(null, true)), array('class' => 'form-control','empty'=>'Selecione...')); ?>
 
       	</dd>
        </dl>
@@ -35,7 +35,7 @@
           <dt><?php echo $form->labelEx($model,'nome',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'nome', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'nome', array('maxlength' => 100,'class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -49,7 +49,7 @@
           <dt><?php echo $form->labelEx($model,'cadastro_imobiliario',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'cadastro_imobiliario', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'cadastro_imobiliario', array('maxlength' => 100,'class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -61,7 +61,7 @@
           <dt><?php echo $form->labelEx($model,'matricula_imobiliaria',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'matricula_imobiliaria', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'matricula_imobiliaria', array('maxlength' => 100,'class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -73,7 +73,7 @@
           <dt><?php echo $form->labelEx($model,'metragem',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'metragem', array('class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'metragem', array('class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -85,7 +85,7 @@
           <dt><?php echo $form->labelEx($model,'metragem_frente',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'metragem_frente', array('class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'metragem_frente', array('class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -97,7 +97,7 @@
           <dt><?php echo $form->labelEx($model,'metragem_fundo',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'metragem_fundo', array('class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'metragem_fundo', array('class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -107,7 +107,7 @@
 		  <dt><?php echo $form->labelEx($model,'metragem_esquerda',array('class'=>'control-label')); ?>
 	</dt>
 		  <dd>
-			<?php echo $form->textField($model, 'metragem_esquerda', array('class' => 'input-xxlarge')); ?>
+			<?php echo $form->textField($model, 'metragem_esquerda', array('class' => 'form-control')); ?>
 
 		</dd>
 	   </dl>
@@ -118,7 +118,7 @@
           <dt><?php echo $form->labelEx($model,'metragem_direita',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'metragem_direita', array('class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'metragem_direita', array('class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -132,7 +132,7 @@
           <dt><?php echo $form->labelEx($model,'valor',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'valor', array('class' => 'input-xxlarge moeda')); ?>
+		  	<?php echo $form->textField($model, 'valor', array('class' => 'form-control moeda')); ?>
 
       	</dd>
        </dl>
@@ -186,11 +186,11 @@
           <dt>&nbsp;</dt>
           <dd>
 
-          <button type="submit" class="btn">
+          <button type="submit" class="btn btn-outline-primary">
             <?
             if($this->action->id == 'create'){
                 ?>
-                <i class="icon-plus"></i>&nbsp;Cadastrar
+                <i class=" ion ion-md-add"></i>&nbsp;Cadastrar
                 <?
             }
             else{
@@ -203,14 +203,14 @@
 			<?
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'index')){
                 ?>
-                <a class="btn" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
+                <a class="btn btn-outline-primary" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
                 <?
             }
             ?>
             <?
             if($this->action->id == 'update' && Yii::app()->user->obj->group->temPermissaoAction($this->id,'delete')){
                 ?>
-                <a class="btn btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->idimovel));?>" style="margin-left:30px;"><i class="icon-trash"></i> Excluir</a>
+                <a class="btn btn-outline-danger btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->idimovel));?>" style="margin-left:30px;"><i class=" ion ion-md-trash"></i> Excluir</a>
                 <?
             }
             ?>

@@ -92,7 +92,7 @@
           <dt><?php echo $form->labelEx($model,'idimovel',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->dropDownList($model, 'idimovel', CHtml::listData(Imovel::model()->findAll(), 'idimovel', 'nome', 'empreendimento_nome'), array('class' => 'input-xxlarge','empty'=>'Selecione...')); ?>                 
+		  	<?php echo $form->dropDownList($model, 'idimovel', CHtml::listData(Imovel::model()->findAll(array('condition'=>"ativo=1")), 'idimovel', 'nome', 'empreendimento_nome'), array('class' => 'form-control','empty'=>'Selecione...')); ?>                 
 
       	</dd>
        </dl>
@@ -104,7 +104,7 @@
           <dt><?php echo $form->labelEx($model,'titulo',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'titulo', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'titulo', array('maxlength' => 100,'class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -133,11 +133,11 @@
           <dt>&nbsp;</dt>
           <dd>
 
-          <button type="submit" class="btn">
+          <button type="submit" class="btn btn-outline-primary">
             <?
             if($this->action->id == 'create'){
                 ?>
-                <i class="icon-plus"></i>&nbsp;Cadastrar
+                <i class=" ion ion-md-add"></i>&nbsp;Cadastrar
                 <?
             }
             else{
@@ -150,14 +150,14 @@
 			<?
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'index')){
                 ?>
-                <a class="btn" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
+                <a class="btn btn-outline-primary" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
                 <?
             }
             ?>
             <?
             if($this->action->id == 'update' && Yii::app()->user->obj->group->temPermissaoAction($this->id,'delete')){
                 ?>
-                <a class="btn btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->iddestaque));?>" style="margin-left:30px;"><i class="icon-trash"></i> Excluir</a>
+                <a class="btn btn-outline-danger btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->iddestaque));?>" style="margin-left:30px;"><i class=" ion ion-md-trash"></i> Excluir</a>
                 <?
             }
             ?>

@@ -23,7 +23,7 @@
 			<dt><?php echo $form->labelEx($model,'nome',array('class'=>'control-label')); ?>
 			</dt>
 			<dd>
-				<?php echo $form->textField($model, 'nome', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+				<?php echo $form->textField($model, 'nome', array('maxlength' => 100,'class' => 'form-control')); ?>
 
 			</dd>
 		</dl>
@@ -42,7 +42,7 @@
 				<label>Informe o endere&ccedil;o da quadra para localizar no mapa: <br>
 					<em>Ex.: Bairro, Cidade - UF, CEP, Pa&iacute;s</em></label>
 					<br>
-					<input type="text" id="addr-address" class="input-xxlarge" placeholder="Bairro, Cidade - UF, CEP, Pa&iacute;s" value=""/>
+					<input type="text" id="addr-address" class="form-control" placeholder="Bairro, Cidade - UF, CEP, Pa&iacute;s" value=""/>
 					<div id="addr" style="width: 543px; height: 400px;"></div>
 				</dd>
 			</dl>
@@ -52,7 +52,7 @@
 		<div class="formSep">
 			<dl class="dl-horizontal">
 				<dt><?php echo $form->labelEx($model,'latitude',array('class'=>'control-label')); ?> </dt>
-				<dd> <?php echo $form->textField($model, 'latitude', array('maxlength' => 50,'class' => 'input-xxlarge', 'id'=>'addr-lat')); ?> </dd>
+				<dd> <?php echo $form->textField($model, 'latitude', array('maxlength' => 50,'class' => 'form-control', 'id'=>'addr-lat')); ?> </dd>
 				<dd>Coordenadas: <a href="http://www.mapcoordinates.net/pt" target="_blank">Acessar</a></dd>
 			</dl>
 		</div>
@@ -61,7 +61,7 @@
 		<div class="formSep">
 			<dl class="dl-horizontal">
 				<dt><?php echo $form->labelEx($model,'longitude',array('class'=>'control-label')); ?> </dt>
-				<dd> <?php echo $form->textField($model, 'longitude', array('maxlength' => 50,'class' => 'input-xxlarge', 'id'=>'addr-lon')); ?> </dd>
+				<dd> <?php echo $form->textField($model, 'longitude', array('maxlength' => 50,'class' => 'form-control', 'id'=>'addr-lon')); ?> </dd>
 				<dd>Coordenadas: <a href="http://www.mapcoordinates.net/pt" target="_blank">Acessar</a></dd>
 			</dl>
 		</div>
@@ -86,11 +86,11 @@
 				<dt>&nbsp;</dt>
 				<dd>
 
-					<button type="submit" class="btn">
+					<button type="submit" class="btn btn-outline-primary">
 						<?
 						if($this->action->id == 'create'){
 							?>
-							<i class="icon-plus"></i>&nbsp;Cadastrar
+							<i class=" ion ion-md-add"></i>&nbsp;Cadastrar
 							<?
 						}
 						else{
@@ -103,14 +103,14 @@
 					<?
 					if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'index')){
 						?>
-						<a class="btn" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
+						<a class="btn btn-outline-primary" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
 						<?
 					}
 					?>
 					<?
 					if($this->action->id == 'update' && Yii::app()->user->obj->group->temPermissaoAction($this->id,'delete')){
 						?>
-						<a class="btn btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->idempreendimento));?>" style="margin-left:30px;"><i class="icon-trash"></i> Excluir</a>
+						<a class="btn btn-outline-danger btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->idempreendimento));?>" style="margin-left:30px;"><i class=" ion ion-md-trash"></i> Excluir</a>
 						<?
 					}
 					?>
@@ -131,7 +131,7 @@
 		<div class="modal-dialog modal-md" role="document"  id="vt-mostra">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h3 class="cor-verde titulo-h2 fonte-open-sans-bold pull-left"><span>Cadastrar bairro</span></h3>
+					<h3 class="cor-verde titulo-h2 fonte-open-sans-bold float-left"><span>Cadastrar bairro</span></h3>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<div class="clear"></div>
 				</div>
@@ -143,7 +143,7 @@
 						</div>
 						<div class="formSep">
 								<label class="control-label" for="Bairro_idestado">Estado</label>
-									<select class="input-large select-estado" name="Bairro[idestado]" id="Bairro_idestado">
+									<select class="form-control select-estado" name="Bairro[idestado]" id="Bairro_idestado">
 										<option value="">Selecione...</option>
 										<option value="1">Goiás</option>
 										<option value="2">Minas Gerais</option>
@@ -178,7 +178,7 @@
 						<div class="formSep">
 							<label class="control-label" for="Bairro_idcidade">Cidade</label>
 
-									<select class="input-large select-cidade" name="Bairro[idcidade]" id="Bairro_idcidade">
+									<select class="form-control select-cidade" name="Bairro[idcidade]" id="Bairro_idcidade">
 										<option value="">Cidade...</option>
 									</select>
 
@@ -186,7 +186,7 @@
 						<div class="formSep">
 							<label class="control-label" for="Bairro_nome">Nome do bairro</label>
 
-									<input type="text" class="input-large " name="Bairro[nome]" id="Bairro_nome">
+									<input type="text" class="form-control " name="Bairro[nome]" id="Bairro_nome">
 
 						</div>
 

@@ -1,5 +1,5 @@
 <div class="pagination pagination-centered ">
-  <div class="pull-left">
+  <div class="float-left">
     <?
     if ( $pagination->itemCount > 0 ) {
       ?>
@@ -35,7 +35,7 @@
     'htmlOptions' => array( 'class' => '' ),
   ) );
   ?>
-  <div class="pull-right" style="margin-right:10px;">
+  <div class="float-right" style="margin-right:10px;">
     <div class="input-prepend input-append"> <span class="add-on">Registros por p&aacute;gina:</span>
       <select name="menu_paginacao" onChange="location.href=this.options[this.selectedIndex].value" style="width:32%;">
         <?

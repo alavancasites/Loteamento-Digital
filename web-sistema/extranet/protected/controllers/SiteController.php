@@ -146,7 +146,7 @@ class SiteController extends Controller {
             $this->redirect('usuario/update?id=' . Yii::app()->user->obj->idUser);
         }
         // display the login form
-        $this->render('login', array('model' => $model));
+        $this->renderPartial('login', array('model' => $model));
     }
 
     /**

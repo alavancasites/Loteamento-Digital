@@ -10,13 +10,13 @@ if($this->hasRel()){
 }
 $this->breadcrumbs[] = Yii::t('app','Atualizar');
 ?>
-<div class="row-fluid">
-  <div class="span12">
-      <div class="w-box">
-          <div class="w-box-header">
+<div class="row">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header">
             <h4><?=Yii::t('app','Atualizar');?></h4>
           </div>
-          <div class="w-box-content">
+          <div class="card-body">
 			<div class="form">
 	
 				<?php $form = $this->beginWidget('GxActiveForm', array(
@@ -53,7 +53,7 @@ $this->breadcrumbs[] = Yii::t('app','Atualizar');
                       <dt><?php echo $form->labelEx($model,'firstName',array('class'=>'control-label')); ?>
             		</dt>
                       <dd>
-                        <?php echo $form->textField($model, 'firstName', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>                 
+                        <?php echo $form->textField($model, 'firstName', array('maxlength' => 100,'class' => 'form-control')); ?>                 
                          
                     </dd>
                    </dl>
@@ -65,7 +65,7 @@ $this->breadcrumbs[] = Yii::t('app','Atualizar');
                       <dt><?php echo $form->labelEx($model,'lastName',array('class'=>'control-label')); ?>
            			 </dt>
                       <dd>
-                        <?php echo $form->textField($model, 'lastName', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>                 
+                        <?php echo $form->textField($model, 'lastName', array('maxlength' => 100,'class' => 'form-control')); ?>                 
                          
                     </dd>
                    </dl>
@@ -77,7 +77,7 @@ $this->breadcrumbs[] = Yii::t('app','Atualizar');
                       <dt><?php echo $form->labelEx($model,'email',array('class'=>'control-label')); ?>
             		</dt>
                       <dd>
-                        <?php echo $form->textField($model, 'email', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>                 
+                        <?php echo $form->textField($model, 'email', array('maxlength' => 100,'class' => 'form-control')); ?>                 
                          
                     </dd>
                    </dl>
@@ -89,7 +89,7 @@ $this->breadcrumbs[] = Yii::t('app','Atualizar');
                       <dt>&nbsp;</dt>
                       <dd>
                       
-                      <button type="submit" class="btn">
+                      <button type="submit" class="btn btn-outline-primary">
                         <i class="icon-pencil"></i>&nbsp;Atualizar
                       </button>
                          

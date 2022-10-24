@@ -8,7 +8,7 @@ if ( $success != "" ) {
     if ( $success == 'create' ) {
       ?>
     Cadastro realizado com sucesso, confirma:<br/>
-    <a href="<?=$this->createUrl('create');?>" class="btn"><i class="icon-plus"></i> Novo cadastro</a>
+    <a href="<?=$this->createUrl('create');?>" class="btn btn-outline-primary"><i class=" ion ion-md-add"></i> Novo cadastro</a>
     <?
     } else {
       ?>

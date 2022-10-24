@@ -57,7 +57,7 @@ $(document).on('click', '#selecionar_todos', function (e) {
     e.stopPropagation();
 });
 
-$(".permissoes-modulo").live("change",function(){
+$(".permissoes-modulo").on("change",function(){
 	$tr_parent = $(this).parents('tr');
 	if($(this).attr('checked') == 'checked'){
 		$tr_parent.find('.permissoes-modulo-operacoes').show();
@@ -71,7 +71,7 @@ $(".permissoes-modulo").live("change",function(){
 	}
 });
 
-$(".btn-delete").live("click",function(){
+$(".btn-delete").on("click",function(){
 	var time = new Date().getTime();
 	$.ajax({
 		url: $(this).attr('href')+'&time='+time,

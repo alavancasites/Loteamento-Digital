@@ -1,95 +1,178 @@
-<header>
-  <div class="row-fluid">
-    <nav class="nav-icons">
-      <div class="logo_cliente"><a href="<?php echo Yii::app()->request->baseUrl; ?>/site"><img src="<?php echo Yii::app()->request->baseUrl; ?>/img/logo_menu.png" alt=""/></a></div>
-      <div class="menu_pop">
-        <?php
-        if ( Yii::app()->user->obj->group->temPermissaoAction( 'plano', 'index' ) ) {
-          ?>
-        <a href="<?=$this->createUrl('plano/index');?>"><i class="fa fa-lg fa-suitcase"></i><span>Planos</span></a>
-        <?
-        }
-        if ( Yii::app()->user->obj->group->temPermissaoAction( 'cliente', 'index' ) ) {
-          ?>
-        <a href="<?=$this->createUrl('cliente/index');?>"><i class="fa fa-lg fa-user"></i><span>Clientes</span></a>
-        <?
-        }
-        ?>
-        <div class="submenu accordion-group">
-          <div class="accordion-heading"> <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1"><i class="fa fa-lg"></i><span>Quadras</span></a> </div>
-          <div id="collapseOne1" class="accordion-body collapse" style="height: 0px;">
-            <?
+<div class="left-side-menu">
+	<div class="slimscroll-menu">
+		<!--- Sidemenu -->
+		<div id="sidebar-menu">
+			<ul class="metismenu" id="side-menu">
+				<li class="menu-title">Navigation</li>
+				<?php /* ?>
+          <li>
+            <a href="javascript: void(0);" class="waves-effect">
+              <i class="ion-md-speedometer"></i>
+              <span> Dashboard </span>
+              <span class="badge badge-info badge-pill float-right"> 3 </span>
+            </a>
+            <ul class="nav-second-level" aria-expanded="false">
+              <li><a href="index.html">Dashboard 1</a></li>
+              <li><a href="dashboard-2.html">Dashboard 2</a></li>
+              <li><a href="dashboard-3.html">Dashboard 3</a></li>
+            </ul>
+          </li>
+          <?php */ ?>
 
-            if ( Yii::app()->user->obj->group->temPermissaoAction( 'empreendimento', 'index' ) ) {
-              ?>
-            <a class="fa fa-lg fa-filter" href="<?=$this->createUrl('empreendimento/index');?>"><span>Quadras</span></a>
-            <?
-            }
-            if ( Yii::app()->user->obj->group->temPermissaoAction( 'imovel', 'index' ) ) {
-              ?>
-            <a class="fa fa-lg fa-user" href="<?=$this->createUrl('imovel/index');?>"><span>Lotes</span></a>
-            <?
-            }
-            if ( Yii::app()->user->obj->group->temPermissaoAction( 'imovel', 'negociacao' ) ) {
-              ?>
-            <a class="fa fa-lg fa-user" href="<?=$this->createUrl('imovel/negociacao');?>"><span>Lotes em negociação</span></a>
-            <?
-            }
-            if ( Yii::app()->user->obj->group->temPermissaoAction( 'imovel', 'reservas' ) ) {
-              ?>
-            <a class="fa fa-lg fa-user" href="<?=$this->createUrl('imovel/reservas');?>"><span>Segunda Reserva</span></a>
-            <?
-            }
-            ?>
-          </div>
-        </div>
-        <?
-        if ( Yii::app()->user->obj->group->temPermissaoAction( 'corretor', 'index' ) ) {
-          ?>
-        <a href="<?=$this->createUrl('corretor/index');?>"><i class="fa fa-lg fa-user"></i><span>Corretores</span></a>
-        <?
-        }
+				<?php /* ?>
+          <li>
+            <a href="javascript: void(0);" class="waves-effect">
+              <i class="ion-md-basket"></i>
+              <span> UI Elements </span>
+              <span class="menu-arrow"></span>
+            </a>
+            <ul class="nav-second-level" aria-expanded="false">
+  
+              <li><a href="ui-typography.html">Typography</a></li>
+              <li><a href="ui-buttons.html">Buttons</a></li>
+            </ul>
+          </li>
+          <?php */ ?>
 
-        if ( Yii::app()->user->obj->group->temPermissaoAction( 'aviso', 'index' ) ) {
-          ?>
-        <a href="<?=$this->createUrl('aviso/index');?>"><i class="fa fa-lg fa-bullhorn"></i><span>Avisos</span></a>
-        <?
-        }
-        if ( Yii::app()->user->obj->group->temPermissaoAction( 'destaque', 'index' ) ) {
-          ?>
-        <a href="<?=$this->createUrl('destaque/index');?>"><i class="fa fa-lg fa-star"></i><span>Destaques</span></a>
-        <?
-        }
-        if ( Yii::app()->user->obj->group->temPermissaoAction( 'arquivo', 'index' ) ) {
-          ?>
-        <div class="submenu accordion-group">
-          <div class="accordion-heading"> <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#collapseOne2" href="#collapseOne2"><i class="fa fa-lg fa-files-o"></i><span>Arquivos</span></a> </div>
-          <div id="collapseOne2" class="accordion-body collapse" style="height: 0px;">
-            <?
-            if ( Yii::app()->user->obj->group->temPermissaoAction( 'arquivoCategoria', 'index' ) ) {
-              ?>
-            <a class="fa fa-lg fa-filter" href="<?=$this->createUrl('arquivoCategoria/index');?>"><span>Categorias</span></a>
-            <?
-            }
-            if ( Yii::app()->user->obj->group->temPermissaoAction( 'arquivo', 'index' ) ) {
-              ?>
-            <a class="fa fa-lg fa-files-o" href="<?=$this->createUrl('arquivo/index');?>"><span>Arquivos</span></a>
-            <?
-            }
-            ?>
-          </div>
-        </div>
-        <?
-        }
-        if ( Yii::app()->user->obj->group->temPermissaoAction( 'contato', 'index' ) ) {
-          ?>
-        <a href="<?=$this->createUrl('contato/index');?>"><i class="fa fa-lg fa-envelope"></i><span>Contato</span></a>
-        <?
-        }
+				<?php
+				if (Yii::app()->user->obj->group->temPermissaoAction('plano', 'index')) {
+				?>
+					<li>
+						<a href="<?= $this->createUrl('plano/index'); ?>">
+							<i class="ion ion-logo-usd"></i>
+							<span> Planos</span>
+						</a>
+					</li>
+				<?
+				}
+				?>
 
-        ?>
-      </div>
-      <div class="menu_suporte"> D&uacute;vidas ou suporte <a href="mailto:atendimento@alavanca.digital">atendimento@alavanca.digital</a> <a href="http://www.alavanca.digital" target="_blank">www.alavanca.digital</a> </div>
-    </nav>
-  </div>
-</header>
+				<?php
+				if (Yii::app()->user->obj->group->temPermissaoAction('cliente', 'index')) {
+				?>
+					<li>
+						<a href="<?= $this->createUrl('cliente/index'); ?>">
+							<i class=" ion ion-ios-person"></i>
+							<span> Clientes </span>
+						</a>
+					</li>
+				<?
+				}
+				?>
+
+				<li>
+					<a href="javascript: void(0);" class="waves-effect">
+						<i class=" ion ion-md-map"></i>
+						<span> Quadras </span>
+						<span class="menu-arrow"></span>
+					</a>
+					<ul class="nav-second-level" aria-expanded="false">
+						<?php
+						if (Yii::app()->user->obj->group->temPermissaoAction('empreendimento', 'index')) {
+						?>
+							<li><a href="<?= $this->createUrl('empreendimento/index'); ?>">Quadras</a></li>
+						<?
+						}
+						if (Yii::app()->user->obj->group->temPermissaoAction('imovel', 'index')) {
+						?>
+
+							<li><a href="<?= $this->createUrl('imovel/index'); ?>">Lotes</a></li>
+						<?
+						}
+						if (Yii::app()->user->obj->group->temPermissaoAction('imovel', 'negociacao')) {
+						?>
+
+							<li><a href="<?= $this->createUrl('imovel/negociacao'); ?>">Lotes em negociação</a></li>
+						<?
+						}
+						if (Yii::app()->user->obj->group->temPermissaoAction('imovel', 'reservas')) {
+						?>
+
+							<li><a href="<?= $this->createUrl('imovel/reservas'); ?>">Segunda Reserva</a></li>
+						<?
+						}
+						?>
+					</ul>
+				</li>
+
+				<?php
+				if (Yii::app()->user->obj->group->temPermissaoAction('corretor', 'index')) {
+				?>
+					<li>
+						<a href="<?= $this->createUrl('corretor/index'); ?>">
+							<i class=" ion ion-ios-person"></i>
+							<span> Corretores </span>
+						</a>
+					</li>
+				<?
+				}
+
+
+				if (Yii::app()->user->obj->group->temPermissaoAction('aviso', 'index')) {
+				?>
+					<li>
+						<a href="<?= $this->createUrl('aviso/index'); ?>">
+							<i class=" ion ion-md-alert"></i>
+							<span> Avisos </span>
+						</a>
+					</li>
+				<?
+				}
+				if (Yii::app()->user->obj->group->temPermissaoAction('destaque', 'index')) {
+				?>
+					<li>
+						<a href="<?= $this->createUrl('destaque/index'); ?>">
+							<i class=" ion ion-md-star"></i>
+							<span> Destaques </span>
+						</a>
+					</li>
+				<?
+				}
+				if (Yii::app()->user->obj->group->temPermissaoAction('arquivo', 'index')) {
+				?>
+					<li>
+						<a href="javascript: void(0);" class="waves-effect">
+							<i class="ion ion-md-folder-open"></i>
+							<span> Arquivos </span>
+							<span class="menu-arrow"></span>
+						</a>
+						<ul class="nav-second-level" aria-expanded="false">
+							<?
+							if (Yii::app()->user->obj->group->temPermissaoAction('arquivoCategoria', 'index')) {
+							?>
+								<li><a href="<?= $this->createUrl('arquivoCategoria/index'); ?>">Categorias</a></li>
+							<?
+							}
+							if (Yii::app()->user->obj->group->temPermissaoAction('arquivo', 'index')) {
+							?>
+								<li><a href="<?= $this->createUrl('arquivo/index'); ?>">Arquivos</a></li>
+							<?
+							}
+							?>
+						</ul>
+					</li>
+				<?
+				}
+				if (Yii::app()->user->obj->group->temPermissaoAction('contato', 'index')) {
+				?>
+					<li>
+						<a href="<?= $this->createUrl('contato/index'); ?>">
+							<i class=" ion ion-md-mail"></i>
+							<span> Contato </span>
+						</a>
+					</li>
+				<?
+				}
+				?>
+
+			</ul>
+
+		</div>
+		<!-- End Sidebar -->
+
+		<div class="clearfix"></div>
+
+	</div>
+	<!-- Sidebar -left -->
+
+</div>

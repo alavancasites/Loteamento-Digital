@@ -26,14 +26,14 @@
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'vendido')&&$data->status!='vendido'){
                 ?>
                 <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/vendido', array('id'=>$data->idimovel));?>" class="btn btn-small  btn-default btn-vendido">
-                    <span class="icon-ok"></span> Vendido
+                    <span class="ion ion-md-checkmark"></span> Vendido
                 </a>
                 <?php
             }
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'contrato')&&$data->status=='reservado'){
                 ?>
                 <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/contrato', array('id'=>$data->idimovel));?>" class="btn btn-small  btn-default btn-contrato">
-                    <span class="icon-ok"></span> Em Contrato
+                    <span class="ion ion-md-checkmark"></span> Em Contrato
                 </a>
                 <?php
             }
@@ -70,26 +70,26 @@
             <?
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'view')){
                 ?>
-                <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/desativar', array('id'=>$data->idimovel));?>" <?=($data->ativo !=1)? 'style="display:none;"' : '';?> class="btn btn-small  btn-success desativar" rel="tooltip" data-original-title="Desativar"><span class="icon-ok icon-white"></span></a>
+                <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/desativar', array('id'=>$data->idimovel));?>" <?=($data->ativo !=1)? 'style="display:none;"' : '';?> class="btn btn-small btn-success desativar" rel="tooltip" data-original-title="Desativar"><span class="ion ion-md-checkmark icon-white"></span></a>
                 <?
             }
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'view')){
                 ?>
-                <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/ativar', array('id'=>$data->idimovel))?>" <?=($data->ativo == 1)? 'style="display:none;"' : '';?> class="btn btn-small  btn-danger ativar" rel="tooltip" data-original-title="Ativar"><span class="icon-ok icon-white"></span></a>		<?
+                <a href="<?php echo Yii::app()->createUrl(Yii::app()->controller->id.'/ativar', array('id'=>$data->idimovel))?>" <?=($data->ativo == 1)? 'style="display:none;"' : '';?> class="btn btn-small  btn-danger ativar" rel="tooltip" data-original-title="Ativar"><span class="ion ion-md-checkmark icon-white"></span></a>		<?
             }
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'view')){
                 ?>
-                <span><a class="btn " href="<?php echo $this->createUrlRel('view',array('id'=>$data->idimovel));?>" title="Visualizar"> <i class="icon-zoom-in"></i> </a></span>
+                <span><a class="btn btn-outline-primary" href="<?php echo $this->createUrlRel('view',array('id'=>$data->idimovel));?>" title="Visualizar"> <i class=" ion ion-md-eye"></i> </a></span>
                 <?
             }
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'update')){
                 ?>
-                <span><a class="btn " href="<?php echo $this->createUrlRel('update',array('id'=>$data->idimovel));?>" title="Editar"> <i class="icon-edit "></i> </a></span>
+                <span><a class="btn btn-outline-primary" href="<?php echo $this->createUrlRel('update',array('id'=>$data->idimovel));?>" title="Editar"> <i class="ion ion-md-create "></i> </a></span>
                 <?
             }
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'delete')){
                 ?>
-                <span><a class="btn btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$data->idimovel));?>" title="Excluir"> <i class="icon-trash"></i> </a></span>
+                <span><a class="btn btn-outline-danger btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$data->idimovel));?>" title="Excluir"> <i class=" ion ion-md-trash"></i> </a></span>
                 <?
             }
             ?>  </td>

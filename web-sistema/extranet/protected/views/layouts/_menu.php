@@ -5,8 +5,8 @@ $array = explode("/",$link);
 ?>
 <header>
     <div class="container">
-        <div class="row-fluid">
-            <div class="span3">
+        <div class="row">
+            <div class="col-md-3">
                 <div class="main-logo"><?php /*?><a href="<?= Yii::app()->baseUrl . '/site' ?>"><img src="<?= Yii::app()->baseUrl ?>/img/logo_hub.png" alt="Plataforma Hub"></a><?php */?></div>
             </div>
             <div class="span6">
@@ -76,7 +76,7 @@ $array = explode("/",$link);
                 </nav>
             </div>
 
-            <div class="span3">
+            <div class="col-md-3">
                 <div class="user-box">
                     <div class="user-box-inner">
                         <?

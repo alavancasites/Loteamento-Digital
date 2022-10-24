@@ -46,7 +46,7 @@
           <dt><?php echo $form->labelEx($model,'ip',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'ip', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>                 
+		  	<?php echo $form->textField($model, 'ip', array('maxlength' => 100,'class' => 'form-control')); ?>                 
 		 	 
       	</dd>
        </dl>
@@ -58,7 +58,7 @@
           <dt><?php echo $form->labelEx($model,'nome',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'nome', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>                 
+		  	<?php echo $form->textField($model, 'nome', array('maxlength' => 100,'class' => 'form-control')); ?>                 
 		 	 
       	</dd>
        </dl>
@@ -70,7 +70,7 @@
           <dt><?php echo $form->labelEx($model,'email',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'email', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>                 
+		  	<?php echo $form->textField($model, 'email', array('maxlength' => 100,'class' => 'form-control')); ?>                 
 		 	 
       	</dd>
        </dl>
@@ -82,7 +82,7 @@
           <dt><?php echo $form->labelEx($model,'telefone',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'telefone', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>                 
+		  	<?php echo $form->textField($model, 'telefone', array('maxlength' => 100,'class' => 'form-control')); ?>                 
 		 	 
       	</dd>
        </dl>
@@ -94,7 +94,7 @@
           <dt><?php echo $form->labelEx($model,'assunto',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'assunto', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>                 
+		  	<?php echo $form->textField($model, 'assunto', array('maxlength' => 100,'class' => 'form-control')); ?>                 
 		 	 
       	</dd>
        </dl>
@@ -106,7 +106,7 @@
           <dt><?php echo $form->labelEx($model,'mensagem',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textArea($model, 'mensagem',array('rows'=>'10','class'=>'input-xxlarge')); ?>                 
+		  	<?php echo $form->textArea($model, 'mensagem',array('rows'=>'10','class'=>'form-control')); ?>                 
 		 	 
       	</dd>
        </dl>
@@ -130,7 +130,7 @@
           <dt><?php echo $form->labelEx($model,'idempreendimento',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'idempreendimento', array('class' => 'input-xxlarge')); ?>                 
+		  	<?php echo $form->textField($model, 'idempreendimento', array('class' => 'form-control')); ?>                 
 		 	 
       	</dd>
        </dl>
@@ -144,11 +144,11 @@
           <dt>&nbsp;</dt>
           <dd>
           
-          <button type="submit" class="btn">
+          <button type="submit" class="btn btn-outline-primary">
             <?
             if($this->action->id == 'create'){
                 ?>
-                <i class="icon-plus"></i>&nbsp;Cadastrar
+                <i class=" ion ion-md-add"></i>&nbsp;Cadastrar
                 <?
             }
             else{
@@ -161,14 +161,14 @@
 			<?
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'index')){
                 ?>
-                <a class="btn" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
+                <a class="btn btn-outline-primary" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
                 <?
             }
             ?>
             <?
             if($this->action->id == 'update' && Yii::app()->user->obj->group->temPermissaoAction($this->id,'delete')){
                 ?>
-                <a class="btn btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->idcontato));?>" style="margin-left:30px;"><i class="icon-trash"></i> Excluir</a>
+                <a class="btn btn-outline-danger btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->idcontato));?>" style="margin-left:30px;"><i class=" ion ion-md-trash"></i> Excluir</a>
                 <?
             }
             ?>  

@@ -23,7 +23,7 @@
           <dt><?php echo $form->labelEx($model,'nome',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'nome', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'nome', array('maxlength' => 100,'class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -35,7 +35,7 @@
           <dt><?php echo $form->labelEx($model,'email',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'email', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'email', array('maxlength' => 100,'class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -47,7 +47,7 @@
           <dt><?php echo $form->labelEx($model,'cpf_cnpj',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'cpf_cnpj', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'cpf_cnpj', array('maxlength' => 100,'class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -59,7 +59,7 @@
           <dt><?php echo $form->labelEx($model,'registro',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'registro', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'registro', array('maxlength' => 100,'class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -71,7 +71,7 @@
           <dt><?php echo $form->labelEx($model,'telefone',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->textField($model, 'telefone', array('maxlength' => 100,'class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->textField($model, 'telefone', array('maxlength' => 100,'class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -83,7 +83,7 @@
           <dt><?php echo $form->labelEx($model,'senha',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->passwordField($model, 'senha', array('value' => '','class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->passwordField($model, 'senha', array('value' => '','class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -95,7 +95,7 @@
           <dt><?php echo $form->labelEx($model,'senha_confirma',array('class'=>'control-label')); ?>
 </dt>
           <dd>
-		  	<?php echo $form->passwordField($model, 'senha_confirma', array('value' => '','class' => 'input-xxlarge')); ?>
+		  	<?php echo $form->passwordField($model, 'senha_confirma', array('value' => '','class' => 'form-control')); ?>
 
       	</dd>
        </dl>
@@ -123,11 +123,11 @@
           <dt>&nbsp;</dt>
           <dd>
 
-          <button type="submit" class="btn">
+          <button type="submit" class="btn btn-outline-primary">
             <?
             if($this->action->id == 'create'){
                 ?>
-                <i class="icon-plus"></i>&nbsp;Cadastrar
+                <i class=" ion ion-md-add"></i>&nbsp;Cadastrar
                 <?
             }
             else{
@@ -140,14 +140,14 @@
 			<?
             if(Yii::app()->user->obj->group->temPermissaoAction($this->id,'index')){
                 ?>
-                <a class="btn" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
+                <a class="btn btn-outline-primary" href="<?php echo $this->createUrlRel('index');?>"><i class="icon-chevron-left"></i> Voltar</a>
                 <?
             }
             ?>
             <?
             if($this->action->id == 'update' && Yii::app()->user->obj->group->temPermissaoAction($this->id,'delete')){
                 ?>
-                <a class="btn btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->idcorretor));?>" style="margin-left:30px;"><i class="icon-trash"></i> Excluir</a>
+                <a class="btn btn-outline-danger btn-delete" href="<?php echo $this->createUrlRel('delete',array('id'=>$model->idcorretor));?>" style="margin-left:30px;"><i class=" ion ion-md-trash"></i> Excluir</a>
                 <?
             }
             ?>

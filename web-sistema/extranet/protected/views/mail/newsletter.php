@@ -24,11 +24,11 @@
           </tr>
           <tr>
             <td><strong>Estado:</strong></td>
-            <td><?=htmlentities($newsletter->estado->nome);?></td>
+            <td><?=Util::formataTexto($newsletter->estado->nome);?></td>
           </tr>
           <tr>
             <td><strong>Cidade:</strong></td>
-            <td><?=htmlentities($newsletter->cidade->nome);?></td>
+            <td><?=Util::formataTexto($newsletter->cidade->nome);?></td>
           </tr>
           <tr>
             <td><strong>Nascimento:</strong></td>

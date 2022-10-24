@@ -30,7 +30,7 @@ $hash = Garbage::getHash();
 					?>
 					<li class="item-excluir pendente <?=$relacionados?> item-<?=$registro->tableName()?>-<?=$registro->primaryKey?>" data-id="<?=$registro->primaryKey?>" data-table="<?=$registro->tableName()?>" data-ref="<?php echo Yii::app()->createUrl($controller.'/delete',array('id'=>$registro->primaryKey));?>">
 
-                        <a href="<?php echo Yii::app()->createUrl($controller.'/view',array('id'=>$registro->primaryKey));?>" target="_blank" class="btn-link"><i class="icon-zoom-in"></i>&nbsp;<?=Util::formataTexto($registro->representingName());?></a>
+                        <a href="<?php echo Yii::app()->createUrl($controller.'/view',array('id'=>$registro->primaryKey));?>" target="_blank" class="btn-link"><i class=" ion ion-md-eye"></i>&nbsp;<?=Util::formataTexto($registro->representingName());?></a>
 
 						<?
 						if($relacionados == 'com-relacionados'){
@@ -69,14 +69,14 @@ $hash = Garbage::getHash();
   <?
   if(count($array_relacionados) == 0){
 	  ?>
-	  <a href="<?php echo $this->createUrlRel('delete',array('id'=>$_GET['id'],'confirm'=>'1'));?>" class="btn btn-danger"><i class="icon-trash icon-white icon-white"></i> Sim</a>
+	  <a href="<?php echo $this->createUrlRel('delete',array('id'=>$_GET['id'],'confirm'=>'1'));?>" class="btn btn-danger"><i class=" ion ion-md-trash icon-white icon-white"></i> Sim</a>
 	  <?
   }
   else{
 	  ?>
-	  <a href="#" onclick="$('.confirmacao').show();$(this).hide();" class="btn btn-danger"><i class="icon-trash icon-white"></i> Excluir este registro e todos registros relacionados</a>
+	  <a href="#" onclick="$('.confirmacao').show();$(this).hide();" class="btn btn-danger"><i class=" ion ion-md-trash icon-white"></i> Excluir este registro e todos registros relacionados</a>
   	  <p class="confirmacao" style="display:none;">Voc&ecirc; tem certeza que deseja excluir "<strong><?=Util::formataTexto($name)?></strong>" e seus itens relacionados?</p>
-      <a href="#" class="btn btn-danger confirmacao btn-confirmacao" style="display:none;"><i class="icon-trash icon-white"></i> Sim</a>
+      <a href="#" class="btn btn-danger confirmacao btn-confirmacao" style="display:none;"><i class=" ion ion-md-trash icon-white"></i> Sim</a>
       <?
   }
   ?>

@@ -54,6 +54,8 @@ class ImperaviRedactorWidget extends CInputWidget
 		if ($this->selector === null) {
 			list($this->name, $this->id) = $this->resolveNameID();
 			$this->htmlOptions['id'] = $this->getId();
+			if (!isset($this->htmlOptions['class']))
+			$this->htmlOptions['class'] = 'form-control';
 			$this->selector = '#' . $this->getId();
 
 			if ($this->hasModel()) {

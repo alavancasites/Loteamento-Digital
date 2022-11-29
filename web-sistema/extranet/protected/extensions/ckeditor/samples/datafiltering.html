@@ -191,9 +191,9 @@ CKEDITOR.replace( 'editor2', {
 		'a[!href];' +
 		'img(left,right)[!src,alt,width,height];' +
 		'table tr th td caption;' +
-		'span{!font-family};' +'
-		'span{!color};' +
-		'span(!marker);' +
+		'col-md-{!font-family};' +'
+		'col-md-{!color};' +
+		'col-md-(!marker);' +
 		'del ins'
 } );
 </pre>
@@ -223,8 +223,8 @@ CKEDITOR.replace( 'editor2', {
 					are accepted by the editor. Any tag attributes will be discarded.
 				</li>
 				<li>
-					<code>span{!font-family}</code>, <code>span{!color}</code>,
-					<code>span(!marker)</code> - <code>&lt;span&gt;</code> tags
+					<code>col-md-{!font-family}</code>, <code>col-md-{!color}</code>,
+					<code>col-md-(!marker)</code> - <code>&lt;col-md-&gt;</code> tags
 					will be accepted if either <code>font-family</code> or
 					<code>color</code> style is set or <code>class="marker"</code>
 					is present.
@@ -256,9 +256,9 @@ CKEDITOR.replace( 'editor2', {
 					'a[!href];' +
 					'img(left,right)[!src,alt,width,height];' +
 					'table tr th td caption;' +
-					'span{!font-family};' +
-					'span{!color};' +
-					'span(!marker);' +
+					'col-md-{!font-family};' +
+					'col-md-{!color};' +
+					'col-md-(!marker);' +
 					'del ins'
 			} );
 

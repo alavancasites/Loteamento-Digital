@@ -842,7 +842,7 @@
 			html = html.replace(/<span(.*?)id="redactor-image-resizer"(.*?)>(.*?)<\/span>/i, '');
 			html = html.replace(/<span(.*?)id="redactor-image-editter"(.*?)>(.*?)<\/span>/i, '');
 
-			// remove spans
+			// remove col-md-s
 			html = html.replace(/<span\s*?>([\w\W]*?)<\/span>/gi, '$1');
 			html = html.replace(/<span(.*?)data-redactor="verified"(.*?)>([\w\W]*?)<\/span>/gi, '<span$1$2>$3</span>');
 			html = html.replace(/<span(.*?)data-redactor-inlineMethods=""(.*?)>([\w\W]*?)<\/span>/gi, '<span$1$2>$3</span>' );
@@ -1582,7 +1582,7 @@
 		},
 		placeholderFocus: function()
 		{
-			this.$editor.find('span.redactor_placeholder').remove();
+			this.$editor.find('col-md-.redactor_placeholder').remove();
 
 			var html = '';
 			if (this.opts.linebreaks === false) html = this.opts.emptyHtml;
@@ -1601,7 +1601,7 @@
 		placeholderRemove: function()
 		{
 			this.opts.placeholder = false;
-			this.$editor.find('span.redactor_placeholder').remove();
+			this.$editor.find('col-md-.redactor_placeholder').remove();
 			this.$editor.off('focus.redactor_placeholder');
 		},
 		placeholderRemoveFromCode: function(html)
@@ -2988,7 +2988,7 @@
 		{
 			// label, abbr, mark, meter, code, q, dfn, ins, time, kbd, var
 
-			var $elem = this.$editor.find('li, img, a, b, strong, sub, sup, i, em, u, small, strike, del, span, cite');
+			var $elem = this.$editor.find('li, img, a, b, strong, sub, sup, i, em, u, small, strike, del, col-md-, cite');
 
 			$elem.not('[data-redactor="verified"]').filter('[style*="font-size"][style*="line-height"]')
 			.css('font-size', '')
@@ -3525,7 +3525,7 @@
 
 			$(nodes).removeAttr(attr);
 
-			this.inlineUnwrapSpan();
+			this.inlineUnwrapcol-md-();
 
 			this.selectionRestore();
 			this.sync();
@@ -3566,7 +3566,7 @@
 		{
 			var parent = $(s).parent(), el;
 
-			if (parent && parent[0].tagName === 'SPAN' && parent[0].attributes.length != 0)
+			if (parent && parent[0].tagName === 'col-md-' && parent[0].attributes.length != 0)
 			{
 				el = parent;
 				$(s).replaceWith($(s).html());
@@ -3597,9 +3597,9 @@
 
 			$.each(nodes, $.proxy(function(i, node)
 			{
-				if (!collapsed && node.tagName !== 'SPAN')
+				if (!collapsed && node.tagName !== 'col-md-')
 				{
-					if (node.parentNode.tagName === 'SPAN' && !$(node.parentNode).hasClass('redactor_editor'))
+					if (node.parentNode.tagName === 'col-md-' && !$(node.parentNode).hasClass('redactor_editor'))
 					{
 						node = node.parentNode;
 					}
@@ -3609,17 +3609,17 @@
 
 			}, this ) );
 		},
-		inlineUnwrapSpan: function()
+		inlineUnwrapcol-md-: function()
 		{
-			var $spans = this.$editor.find('span[data-redactor-inlineMethods]');
+			var $col-md-s = this.$editor.find('col-md-[data-redactor-inlineMethods]');
 
-			$.each($spans, $.proxy(function(i, span)
+			$.each($col-md-s, $.proxy(function(i, col-md-)
 			{
-				var $span = $(span);
+				var $col-md- = $(col-md-);
 
-				if ($span.attr('class') === undefined && $span.attr('style') === undefined)
+				if ($col-md-.attr('class') === undefined && $col-md-.attr('style') === undefined)
 				{
-					$span.contents().unwrap();
+					$col-md-.contents().unwrap();
 				}
 
 			}, this));
@@ -3968,7 +3968,7 @@
 			}
 
 
-			// remove span
+			// remove col-md-
 			html = html.replace(/<span(.*?)>([\w\W]*?)<\/span>/gi, '$2');
 
 			// remove empty
@@ -4437,8 +4437,8 @@
 					this.$editor.html(this.savedSel);
 				}
 
-				var node1 = this.$editor.find('span#selection-marker-1');
-				var node2 = this.$editor.find('span#selection-marker-2');
+				var node1 = this.$editor.find('col-md-#selection-marker-1');
+				var node2 = this.$editor.find('col-md-#selection-marker-2');
 
 				if (this.browser('mozilla'))
 				{
@@ -4474,7 +4474,7 @@
 		{
 			if (!this.opts.rangy)
 			{
-				$.each(this.$editor.find('span.redactor-selection-marker'), function()
+				$.each(this.$editor.find('col-md-.redactor-selection-marker'), function()
 				{
 					var html = $.trim($(this).html().replace(/[^\u0000-~]/g, ''));
 					if (html == '')
@@ -4572,10 +4572,10 @@
 		    	return(false);
 		    }
 
-		    var tempspan = this.document.createElement("span");
-		    tempspan.appendChild(frag);
+		    var tempcol-md- = this.document.createElement("col-md-");
+		    tempcol-md-.appendChild(frag);
 
-		    window.selnodes = tempspan.childNodes;
+		    window.selnodes = tempcol-md-.childNodes;
 
 			var len = selnodes.length;
 		    var output = [];
@@ -4796,7 +4796,7 @@
 			this.tableObserver(table);
 			this.buttonActiveObserver();
 
-			table.find('span#selection-marker-1').remove();
+			table.find('col-md-#selection-marker-1').remove();
 			table.removeAttr('id');
 
 			this.sync();

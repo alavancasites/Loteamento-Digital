@@ -63,7 +63,7 @@ class YiiDebugToolbarResourceUsage extends CWidget
         {
             echo CHtml::openTag('li');
             echo CHtml::tag('label', array(), $key);
-            echo CHtml::tag('span', array(), $value);
+            echo CHtml::tag('col-md-', array(), $value);
             echo CHtml::closeTag('li');
         }
         echo CHtml::closeTag('ul');

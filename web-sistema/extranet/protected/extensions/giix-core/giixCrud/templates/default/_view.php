@@ -6,7 +6,7 @@
 	<?='<?
   }
   ?>'?>
-  <td style="text-align:right;">
+  <td class="actions">>
     <?='<?
 	if(Yii::app()->user->obj->group->temPermissaoAction($this->id,\'view\')){
         ?>'?>

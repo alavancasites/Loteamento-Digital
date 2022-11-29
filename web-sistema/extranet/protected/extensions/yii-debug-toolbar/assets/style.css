@@ -1,5 +1,5 @@
 #yii-debug-toolbar {color:#000;background:#FFF;}
-#yii-debug-toolbar, #yii-debug-toolbar div, #yii-debug-toolbar span, #yii-debug-toolbar applet, #yii-debug-toolbar object, #yii-debug-toolbar iframe,
+#yii-debug-toolbar, #yii-debug-toolbar div, #yii-debug-toolbar col-md-, #yii-debug-toolbar applet, #yii-debug-toolbar object, #yii-debug-toolbar iframe,
 #yii-debug-toolbar h1, #yii-debug-toolbar h2, #yii-debug-toolbar h3, #yii-debug-toolbar h4, #yii-debug-toolbar h5, #yii-debug-toolbar h6, #yii-debug-toolbar p, #yii-debug-toolbar blockquote, #yii-debug-toolbar pre,
 #yii-debug-toolbar a, #yii-debug-toolbar abbr, #yii-debug-toolbar acronym, #yii-debug-toolbar address, #yii-debug-toolbar big, #yii-debug-toolbar cite, #yii-debug-toolbar code,
 #yii-debug-toolbar del, #yii-debug-toolbar dfn, #yii-debug-toolbar em, #yii-debug-toolbar font, #yii-debug-toolbar img, #yii-debug-toolbar ins, #yii-debug-toolbar kbd, #yii-debug-toolbar q, #yii-debug-toolbar s, #yii-debug-toolbar samp,
@@ -475,7 +475,7 @@ margin-top:0.8em;
 #yii-debug-toolbar #resource-usage .panel ul,
 #yii-debug-toolbar #resource-usage .panel li,
 #yii-debug-toolbar #resource-usage .panel li label,
-#yii-debug-toolbar #resource-usage .panel li span{
+#yii-debug-toolbar #resource-usage .panel li col-md-{
     font-size: 9px;
     color: #fff;
 }
@@ -484,7 +484,7 @@ margin-top:0.8em;
     float: left;
 }
 
-#yii-debug-toolbar #resource-usage .panel li span{
+#yii-debug-toolbar #resource-usage .panel li col-md-{
     float: right;
     color: #CE4E4E;
 }

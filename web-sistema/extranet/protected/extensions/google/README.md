@@ -11,7 +11,7 @@ Sep 16, 2014: Add loadVersion parameter.
 
 Examples:
 <div class="row"> 
-    <div class="span6" >  
+    <div class="col-md-6" >  
         <?php
 //very useful google chart
         $this->widget('ext.Hzl.google.HzlVisualizationChart', array('visualization' => 'PieChart',
@@ -41,7 +41,7 @@ Examples:
 </div>
 
 <div class="row"> 
-    <div class="span6" >  
+    <div class="col-md-6" >  
 <?php
 $this->widget('ext.Hzl.google.HzlVisualizationChart', 
         array('visualization' => 'Gauge','packages'=>'gauge',
@@ -67,7 +67,7 @@ $this->widget('ext.Hzl.google.HzlVisualizationChart',
 
 
 <div class="row"> 
-    <div class="span6" >  
+    <div class="col-md-6" >  
 <?php
   $this->widget('ext.Hzl.google.HzlVisualizationChart', array('visualization' => 'Map',
             'packages'=>'map',//default is corechart

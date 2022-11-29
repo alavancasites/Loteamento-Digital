@@ -125,7 +125,7 @@ plupload_message i {
 	font-style: italic;	
 }
 
-.plupload_message p span.ui-icon {
+.plupload_message p col-md-.ui-icon {
 	float: left;
 	margin-right: 0.3em;	
 }

@@ -11,12 +11,12 @@ if($this->hasRel()){
 $this->breadcrumbs[] = Yii::t(\'app\',\'Visualizar\');
 ?>'?>
 <div class="row-fluid">
-  <div class="span12">
-      <div class="w-box">
-          <div class="w-box-header">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header">
             <h4>Visualizar</h4>
           </div>
-          <div class="w-box-content">
+          <div class="card-body">
           
 		  <?='<? 
           $this->renderPartial("//layouts/sucesso",array(

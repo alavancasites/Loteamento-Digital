@@ -98,25 +98,17 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 		}
 	}
 	public function actionAtivar($id){
-		$model=$this->loadModel($id);
+		$model=$this->loadModel($id, '<?php echo $this->modelClass; ?>');
 		$model->ativo= 1;
 		$model->update();
 		Yii::app()->request->redirect(Yii::app()->user->returnUrl);
 	}
 	
 	public function actionDesativar($id){
-		$model=$this->loadModel($id);
+		$model=$this->loadModel($id, '<?php echo $this->modelClass; ?>');
 		$model->ativo= 0;
 		$model->update();
 		Yii::app()->request->redirect(Yii::app()->user->returnUrl);
-	}
-
-	public function loadModel($id)
-	{
-		$model=<?php echo $this->modelClass; ?>::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
 	}
 
 	public function actionIndex() {
@@ -134,9 +126,24 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 		}
 		
 		if(isset($_GET['o']) && isset($_GET['f']) ){
-			$criteria->order = $_GET['f']." ".$_GET['o'];
+			$relations = $model->relations();
+			$relations_array = array_keys($relations);
+			if(in_array($_GET['f'],$relations_array)){
+				$criteria->with[] = $_GET['f'];
+				$criteria->together = true; 
+				$model_class = $relations[$_GET['f']][1];
+				$obj_class = new $model_class();
+				$representing_column = $obj_class->representingColumn();
+				if(is_array($representing_column)){
+					$representing_column = $representing_column[0];
+				}
+				$criteria->order = $_GET['f'].".".$representing_column." ".$_GET['o'];
+			}
+			else{
+				$criteria->order = $_GET['f']." ".$_GET['o'];
+			}
 		}
-        else{
+		else{
         	$criteria->order = '<?=$this->getCrudOrder($this->tableSchema);?>';
         }
 		

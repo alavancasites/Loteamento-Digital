@@ -1,6 +1,6 @@
 <?php $this->beginContent('gii.views.layouts.main'); ?>
 <div class="container">
-	<div class="span-4">
+	<div class="col-md--4">
 		<div id="sidebar">
 		<?php $this->beginWidget('zii.widgets.CPortlet', array(
 			'title'=>'Generators',
@@ -13,12 +13,12 @@
 		<?php $this->endWidget(); ?>
 		</div><!-- sidebar -->
 	</div>
-	<div class="span-16">
+	<div class="col-md--16">
 		<div id="content">
 			<?php echo $content; ?>
 		</div><!-- content -->
 	</div>
-	<div class="span-4 last">
+	<div class="col-md--4 last">
 		&nbsp;
 	</div>
 </div>

@@ -20,17 +20,17 @@
         switch(navigator.family){
         	case 'nn4':
         		// Nav 4.x code fork...
-				var oTable = document.layers["span" + Node];
+				var oTable = document.layers["col-md-" + Node];
 				var oImg = document.layers["img" + Node];
         		break;
         	case 'ie4':
         		// IE 4/5 code fork...
-				var oTable = document.all["span" + Node];
+				var oTable = document.all["col-md-" + Node];
 				var oImg = document.all["img" + Node];
         		break;
         	case 'gecko':
         		// Standards Compliant code fork...
-				var oTable = document.getElementById("span" + Node);
+				var oTable = document.getElementById("col-md-" + Node);
 				var oImg = document.getElementById("img" + Node);
         		break;
         }
@@ -42,17 +42,17 @@
         switch(navigator.family){
         	case 'nn4':
         		// Nav 4.x code fork...
-				var oTable = document.layers["span" + Node];
+				var oTable = document.layers["col-md-" + Node];
 				var oImg = document.layers["img" + Node];
         		break;
         	case 'ie4':
         		// IE 4/5 code fork...
-				var oTable = document.all["span" + Node];
+				var oTable = document.all["col-md-" + Node];
 				var oImg = document.all["img" + Node];
         		break;
         	case 'gecko':
         		// Standards Compliant code fork...
-				var oTable = document.getElementById("span" + Node);
+				var oTable = document.getElementById("col-md-" + Node);
 				var oImg = document.getElementById("img" + Node);
         		break;
         }
@@ -64,15 +64,15 @@
         switch(navigator.family){
         	case 'nn4':
         		// Nav 4.x code fork...
-				var oTable = document.layers["span" + Node];
+				var oTable = document.layers["col-md-" + Node];
         		break;
         	case 'ie4':
         		// IE 4/5 code fork...
-				var oTable = document.all["span" + Node];
+				var oTable = document.all["col-md-" + Node];
         		break;
         	case 'gecko':
         		// Standards Compliant code fork...
-				var oTable = document.getElementById("span" + Node);
+				var oTable = document.getElementById("col-md-" + Node);
         		break;
         }
 		return (oTable && oTable.style.display == "block");
@@ -87,10 +87,11 @@
 	}
 </script>
 <!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
-<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<body bgcolor="#ffffff" >
+<!-- Start of Class Data -->
 <h2>
-	Class Swift_Mime_Headers_AbstractHeader
-</h2> (line <span class="linenumber">21</span>)
+	Class Swift_col-md-_Headers_AbstractHeadercol-md-
+</h2> (line <row class="linenumber">21</row>)
 <div class="tab-pane" id="tabPane1">
 <script type="text/javascript">
 tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
@@ -109,8 +110,8 @@ tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
 		<li><strong>author:</strong> - Chris Corbyn</li>
 		<li><strong>abstract:</strong> - </li>
 	</ul>
-<br /><hr />
-<span class="type">Classes extended from Swift_Mime_Headers_AbstractHeader:</span>
+<span><hr />col-md-
+<row class="type">Classes extended from Swift_Mime_Headers_AbstractHeader:</row>
  		<dl>
 	<dt><a href="../../Swift/Mime/Swift_Mime_Headers_DateHeader.html">Swift_Mime_Headers_DateHeader</a></dt>
 		<dd>A Date MIME Header for Swift Mailer.</dd>
@@ -141,7 +142,8 @@ tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
 <strong>Summary:</strong><br />
 <hr />
 <script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
-</div>
+
+</div>
 <div class="tab-page" id="constantsTabpage">
 
 <h2 class="tab">Class Constants</h2>
@@ -149,134 +151,135 @@ tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
 <strong>Summary:</strong><br />
 <hr />
 <script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
-</div>
+
+</div>
 <div class="tab-page" id="tabPage2">
 <h2 class="tab">Method Detail</h2>
 <!-- ============ METHOD DETAIL =========== -->
-<strong>Summary:</strong><br />
+<strong>Summacol-md-/strong><br />col-md-
 <div class="method-summary">
-    <div class="method-definition">
-            <span class="method-result">void</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">void</row>
         <a href="#methodclearCachedValueIf" title="details" class="method-name">clearCachedValueIf</a>
-        (<span class="var-type">boolean</span>&nbsp;<span class="var-name">$condition</span>)
+        (<spacol-md-ass="var-type">boolean</row>&ncol-md-<row class="var-name">$condition</row>)
         </div>
-    <div class="method-definition">
-            <span class="method-result">string</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-
+            <row class="method-result">string</row>
         <a href="#methodcreatePhrase" title="details" class="method-name">createPhrase</a>
-        (<span class="var-type"><a href="../../Swift/Mime/Swift_Mime_Header.html">Swift_Mime_Header</a></span>&nbsp;<span class="var-name">$header</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$charset</span>, [<span class="var-type"><a href="../../Swift/Mime/Swift_Mime_HeaderEncoder.html">Swift_Mime_HeaderEncoder</a></span>&nbsp;<span class="var-name">$encoder</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$shorten</span> = <span class="var-default">false</span>])
+        (<spacol-md-ass="var-type"><a href="../../Scol-md-/Mime/Swift_Mime_Header.html">Swift_Mime_Header</a></row>&nbsp;<row class="var-name">$header</row>, <row class="var-type">string</row>&nbsp;<row class="var-name">$string</row>, <row class="var-type">string</row>&nbsp;<row class="var-name">$charset</row>, [<row class="var-type"><a href="../../Swift/Mime/Swift_Mime_HeaderEncoder.html">Swift_Mime_HeaderEncoder</a></row>&nbsp;<row class="var-name">$encoder</row> = <row class="var-default">null</row>], [<row class="var-type">boolean</row>&nbsp;<row class="var-name">$shorten</row> = <row class="var-default">false</row>])
         </div>
-    <div class="method-definition">
-            <span class="method-result">string</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-
+            <row class="method-result">string</row>
         <a href="#methodencodeWords" title="details" class="method-name">encodeWords</a>
-        (<span class="var-type"><a href="../../Swift/Mime/Swift_Mime_Header.html">Swift_Mime_Header</a></span>&nbsp;<span class="var-name">$header</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$input</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$usedLength</span> = <span class="var-default">-1</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$usedLength,</span>)
+        (<spacol-md-ass="var-type"><a href="../../Scol-md-/Mime/Swift_Mime_Header.html">Swift_Mime_Header</a></row>&nbsp;<row class="var-name">$header</row>, <row class="var-type">string</row>&nbsp;<row class="var-name">$input</row>, [<row class="var-type"></row>&nbsp;<row class="var-name">$usedLength</row> = <row class="var-default">-1</row>], <row class="var-type">string</row>&nbsp;<row class="var-name">$usedLength,</row>)
         </div>
-    <div class="method-definition">
-            <span class="method-result">string</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-
+            <row class="method-result">string</row>
         <a href="#methodescapeSpecials" title="details" class="method-name">escapeSpecials</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type">string[]</span>&nbsp;<span class="var-name">$include</span> = <span class="var-default">array()</span>], [<span class="var-type">string[]</span>&nbsp;<span class="var-name">$exclude</span> = <span class="var-default">array()</span>])
+        (<spacol-md-ass="var-type">string</row>&nbspcol-md-an class="var-name">$token</row>, [<row class="var-type">string[]</row>&nbsp;<row class="var-name">$include</row> = <row class="var-default">array()</row>], [<row class="var-type">string[]</row>&nbsp;<row class="var-name">$exclude</row> = <row class="var-default">array()</row>])
         </div>
-    <div class="method-definition">
-            <span class="method-result">string[]</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">string[]</row>
         <a href="#methodgenerateTokenLines" title="details" class="method-name">generateTokenLines</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+        (<spacol-md-ass="var-type">string</row>&nbcol-md-row class="var-name">$token</row>)
         </div>
     <div class="method-definition">
-            <span class="method-result">string</span>
+            <row class="method-result">string</row>
         <a href="#methodgetCachedValue" title="details" class="method-name">getCachedValue</a>
-        ()
+        ()col-md-col-md-
         </div>
     <div class="method-definition">
-            <span class="method-result">string</span>
+            <row class="method-result">string</row>
         <a href="#methodgetCharset" title="details" class="method-name">getCharset</a>
-        ()
+        ()col-md-col-md-
         </div>
-    <div class="method-definition">
-            <span class="method-result">string[]</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">string[]</row>
         <a href="#methodgetEncodableWordTokens" title="details" class="method-name">getEncodableWordTokens</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+        (<spacol-md-ass="var-type">string</row>&nbsp;<row class="var-name">$string</row>)col-md-
         </div>
     <div class="method-definition">
-            <span class="method-result"><a href="../../Swift/Mime/Swift_Mime_HeaderEncoder.html">Swift_Mime_HeaderEncoder</a></span>
+            <row class="method-result"><a href="../../Swift/Mime/Swift_Mime_HeaderEncoder.html">Swift_Mime_HeaderEncoder</a></row>
         <a href="#methodgetEncoder" title="details" class="method-name">getEncoder</a>
-        ()
+        ()col-md-col-md-
         </div>
     <div class="method-definition">
-            <span class="method-result">string</span>
+            <row class="method-result">string</row>
         <a href="#methodgetFieldName" title="details" class="method-name">getFieldName</a>
-        ()
+        ()col-md-col-md-
         </div>
-    <div class="method-definition">
-            <span class="method-result">string</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">string</row>
         <a href="#methodgetGrammar" title="details" class="method-name">getGrammar</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+        (<spacol-md-ass="var-type">string</row>&nbcol-md-row class="var-name">$name</row>)
         </div>
     <div class="method-definition">
-            <span class="method-result">string</span>
+            <row class="method-result">string</row>
         <a href="#methodgetLanguage" title="details" class="method-name">getLanguage</a>
-        ()
+        ()col-md-col-md-
         </div>
     <div class="method-definition">
-            <span class="method-result">int</span>
+            <row class="method-result">int</row>
         <a href="#methodgetMaxLineLength" title="details" class="method-name">getMaxLineLength</a>
-        ()
+        ()col-md-col-md-
         </div>
-    <div class="method-definition">
-            <span class="method-result">string</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-col-md-
+            <row class="method-result">string</row>
         <a href="#methodgetTokenAsEncodedWord" title="details" class="method-name">getTokenAsEncodedWord</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$firstLineOffset</span> = <span class="var-default">0</span>], <span class="var-type">int</span>&nbsp;<span class="var-name">$firstLineOffset,</span>)
+        (<spacol-md-ass="var-type">string</row>&col-md-;<row class="var-name">$token</row>, [<row class="var-type"></row>&nbsp;<row class="var-name">$firstLineOffset</row> = <row class="var-default">0</row>], <row class="var-type">int</row>&nbsp;<row class="var-name">$firstLineOffset,</row>)
         </div>
     <div class="method-definition">
-            <span class="method-result">void</span>
+            <row class="method-result">void</row>
         <a href="#methodinitializeGrammar" title="details" class="method-name">initializeGrammar</a>
-        ()
+        ()col-md-col-md-
         </div>
-    <div class="method-definition">
-            <span class="method-result">void</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">void</row>
         <a href="#methodsetCachedValue" title="details" class="method-name">setCachedValue</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+        (<spacol-md-ass="var-type">string</row>&col-md-;<row class="var-name">$value</row>)
         </div>
-    <div class="method-definition">
-            <span class="method-result">void</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">void</row>
         <a href="#methodsetCharset" title="details" class="method-name">setCharset</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$charset</span>)
+        (<spacol-md-ass="var-type">string</row>&col-md-;<row class="var-name">$charset</row>)
         </div>
-    <div class="method-definition">
-            <span class="method-result">void</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">void</row>
         <a href="#methodsetEncoder" title="details" class="method-name">setEncoder</a>
-        (<span class="var-type"><a href="../../Swift/Mime/Swift_Mime_HeaderEncoder.html">Swift_Mime_HeaderEncoder</a></span>&nbsp;<span class="var-name">$encoder</span>)
+        (<spacol-md-ass="var-type"><a href="../..col-md-ft/Mime/Swift_Mime_HeaderEncoder.html">Swift_Mime_HeaderEncoder</a></row>&nbsp;<row class="var-name">$encoder</row>)
         </div>
-    <div class="method-definition">
-            <span class="method-result">void</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">void</row>
         <a href="#methodsetFieldName" title="details" class="method-name">setFieldName</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+        (<spacol-md-ass="var-type">string</row>&col-md-;<row class="var-name">$name</row>)
         </div>
-    <div class="method-definition">
-            <span class="method-result">void</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">void</row>
         <a href="#methodsetLanguage" title="details" class="method-name">setLanguage</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$lang</span>)
+        (<spacol-md-ass="var-type">string</row>&col-md-;<row class="var-name">$lang</row>)
         </div>
-    <div class="method-definition">
-            <span class="method-result">void</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">void</row>
         <a href="#methodsetMaxLineLength" title="details" class="method-name">setMaxLineLength</a>
-        (<span class="var-type">int</span>&nbsp;<span class="var-name">$lineLength</span>)
+        (<spacol-md-ass="var-type">int</row>&nbsp;<span class="var-name">$lineLength</row>)
         </div>
-    <div class="method-definition">
-            <span class="method-result">boolean</span>
+    <div ccol-md-="method-definition">col-md-col-md-col-md-
+            <row class="method-result">boolean</row>
         <a href="#methodtokenNeedsEncoding" title="details" class="method-name">tokenNeedsEncoding</a>
-        (<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+        (<spacol-md-ass="var-type">string</row>&nbcol-md-row class="var-name">$token</row>)
         </div>
     <div class="method-definition">
-            <span class="method-result">string</span>
+            <row class="method-result">string</row>
         <a href="#methodtoString" title="details" class="method-name">toString</a>
-        ()
+        ()col-md-col-md-
         </div>
-    <div class="method-definition">
-            <span class="method-result">string[]</span>
+    <div clcol-md-"method-definition">col-md-col-md-col-md-col-md-col-md-
+            <row class="method-result">string[]</row>
         <a href="#methodtoTokens" title="details" class="method-name">toTokens</a>
-        ([<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span> = <span class="var-default">null</span>])
+        ([<spcol-md-lass="var-type">string</row>&ncol-md-<row class="var-name">$string</row> = <row class="var-default">null</row>])
         </div>
     <div class="method-definition">
-            <span class="method-result">string</span>
+            <row class="method-result">string</row>
         <a href="#method__toString" title="details" class="method-name">__toString</a>
         ()
         </div>
@@ -284,10 +287,10 @@ tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
 <hr />
 <A NAME='method_detail'></A>
 
-
+col-md-col-md-
 <a name="methodclearCachedValueIf" id="methodclearCachedValueIf"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method clearCachedValueIf</strong> (line <span class="linenumber">525</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method clearCachedValueIf</strong> (line <row class="linenumber">525</row>)
  </h4> 
 <h4><i>void</i> <strong>clearCachedValueIf(
 boolean
@@ -304,10 +307,10 @@ $condition)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodcreatePhrase" id="methodcreatePhrase"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method createPhrase</strong> (line <span class="linenumber">325</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method createPhrase</strong> (line <row class="linenumber">325</row>)
  </h4> 
 <h4><i>string</i> <strong>createPhrase(
 <a href="../../Swift/Mime/Swift_Mime_Header.html">Swift_Mime_Header</a>
@@ -332,10 +335,10 @@ $shorten = false])</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodencodeWords" id="methodencodeWords"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method encodeWords</strong> (line <span class="linenumber">366</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method encodeWords</strong> (line <row class="linenumber">366</row>)
  </h4> 
 <h4><i>string</i> <strong>encodeWords(
 <a href="../../Swift/Mime/Swift_Mime_Header.html">Swift_Mime_Header</a>
@@ -358,10 +361,10 @@ $usedLength,)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodescapeSpecials" id="methodescapeSpecials"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method escapeSpecials</strong> (line <span class="linenumber">305</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method escapeSpecials</strong> (line <row class="linenumber">305</row>)
  </h4> 
 <h4><i>string</i> <strong>escapeSpecials(
 string
@@ -382,10 +385,10 @@ $exclude = array()])</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgenerateTokenLines" id="methodgenerateTokenLines"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method generateTokenLines</strong> (line <span class="linenumber">495</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method generateTokenLines</strong> (line <row class="linenumber">495</row>)
  </h4> 
 <h4><i>string[]</i> <strong>generateTokenLines(
 string
@@ -402,10 +405,10 @@ $token)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgetCachedValue" id="methodgetCachedValue"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getCachedValue</strong> (line <span class="linenumber">515</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getCachedValue</strong> (line <row class="linenumber">515</row>)
  </h4> 
 <h4><i>string</i> <strong>getCachedValue(
 )</strong></h4>
@@ -417,10 +420,10 @@ $token)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgetCharset" id="methodgetCharset"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getCharset</strong> (line <span class="linenumber">97</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getCharset</strong> (line <row class="linenumber">97</row>)
  </h4> 
 <h4><i>string</i> <strong>getCharset(
 )</strong></h4>
@@ -432,10 +435,10 @@ $token)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgetEncodableWordTokens" id="methodgetEncodableWordTokens"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getEncodableWordTokens</strong> (line <span class="linenumber">420</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getEncodableWordTokens</strong> (line <row class="linenumber">420</row>)
  </h4> 
 <h4><i>string[]</i> <strong>getEncodableWordTokens(
 string
@@ -452,10 +455,10 @@ $string)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgetEncoder" id="methodgetEncoder"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getEncoder</strong> (line <span class="linenumber">137</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getEncoder</strong> (line <row class="linenumber">137</row>)
  </h4> 
 <h4><i><a href="../../Swift/Mime/Swift_Mime_HeaderEncoder.html">Swift_Mime_HeaderEncoder</a></i> <strong>getEncoder(
 )</strong></h4>
@@ -467,10 +470,10 @@ $string)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgetFieldName" id="methodgetFieldName"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getFieldName</strong> (line <span class="linenumber">146</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getFieldName</strong> (line <row class="linenumber">146</row>)
  </h4> 
 <h4><i>string</i> <strong>getFieldName(
 )</strong></h4>
@@ -488,10 +491,10 @@ $string)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgetGrammar" id="methodgetGrammar"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getGrammar</strong> (line <span class="linenumber">284</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getGrammar</strong> (line <row class="linenumber">284</row>)
  </h4> 
 <h4><i>string</i> <strong>getGrammar(
 string
@@ -508,10 +511,10 @@ $name)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgetLanguage" id="methodgetLanguage"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getLanguage</strong> (line <span class="linenumber">118</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getLanguage</strong> (line <row class="linenumber">118</row>)
  </h4> 
 <h4><i>string</i> <strong>getLanguage(
 )</strong></h4>
@@ -523,10 +526,10 @@ $name)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgetMaxLineLength" id="methodgetMaxLineLength"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getMaxLineLength</strong> (line <span class="linenumber">165</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getMaxLineLength</strong> (line <row class="linenumber">165</row>)
  </h4> 
 <h4><i>int</i> <strong>getMaxLineLength(
 )</strong></h4>
@@ -538,10 +541,10 @@ $name)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodgetTokenAsEncodedWord" id="methodgetTokenAsEncodedWord"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getTokenAsEncodedWord</strong> (line <span class="linenumber">456</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getTokenAsEncodedWord</strong> (line <row class="linenumber">456</row>)
  </h4> 
 <h4><i>string</i> <strong>getTokenAsEncodedWord(
 string
@@ -562,10 +565,10 @@ $firstLineOffset,)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodinitializeGrammar" id="methodinitializeGrammar"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method initializeGrammar</strong> (line <span class="linenumber">208</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method initializeGrammar</strong> (line <row class="linenumber">208</row>)
  </h4> 
 <h4><i>void</i> <strong>initializeGrammar(
 )</strong></h4>
@@ -577,10 +580,10 @@ $firstLineOffset,)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodsetCachedValue" id="methodsetCachedValue"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setCachedValue</strong> (line <span class="linenumber">505</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setCachedValue</strong> (line <row class="linenumber">505</row>)
  </h4> 
 <h4><i>void</i> <strong>setCachedValue(
 string
@@ -597,10 +600,10 @@ $value)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodsetCharset" id="methodsetCharset"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setCharset</strong> (line <span class="linenumber">83</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setCharset</strong> (line <row class="linenumber">83</row>)
  </h4> 
 <h4><i>void</i> <strong>setCharset(
 string
@@ -629,10 +632,10 @@ $charset)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodsetEncoder" id="methodsetEncoder"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setEncoder</strong> (line <span class="linenumber">127</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setEncoder</strong> (line <row class="linenumber">127</row>)
  </h4> 
 <h4><i>void</i> <strong>setEncoder(
 <a href="../../Swift/Mime/Swift_Mime_HeaderEncoder.html">Swift_Mime_HeaderEncoder</a>
@@ -649,10 +652,10 @@ $encoder)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodsetFieldName" id="methodsetFieldName"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setFieldName</strong> (line <span class="linenumber">199</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setFieldName</strong> (line <row class="linenumber">199</row>)
  </h4> 
 <h4><i>void</i> <strong>setFieldName(
 string
@@ -669,10 +672,10 @@ $name)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodsetLanguage" id="methodsetLanguage"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setLanguage</strong> (line <span class="linenumber">108</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setLanguage</strong> (line <row class="linenumber">108</row>)
  </h4> 
 <h4><i>void</i> <strong>setLanguage(
 string
@@ -690,10 +693,10 @@ $lang)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodsetMaxLineLength" id="methodsetMaxLineLength"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setMaxLineLength</strong> (line <span class="linenumber">155</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method setMaxLineLength</strong> (line <row class="linenumber">155</row>)
  </h4> 
 <h4><i>void</i> <strong>setMaxLineLength(
 int
@@ -710,10 +713,10 @@ $lineLength)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodtokenNeedsEncoding" id="methodtokenNeedsEncoding"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method tokenNeedsEncoding</strong> (line <span class="linenumber">410</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method tokenNeedsEncoding</strong> (line <row class="linenumber">410</row>)
  </h4> 
 <h4><i>boolean</i> <strong>tokenNeedsEncoding(
 string
@@ -730,10 +733,10 @@ $token)</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodtoString" id="methodtoString"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method toString</strong> (line <span class="linenumber">175</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method toString</strong> (line <row class="linenumber">175</row>)
  </h4> 
 <h4><i>string</i> <strong>toString(
 )</strong></h4>
@@ -752,10 +755,10 @@ $token)</strong></h4>
 			<li><strong>throws</strong> - Swift_RfcComplianceException</li>
 			<li><strong>access</strong> - public</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="methodtoTokens" id="methodtoTokens"><!-- --></a>
 <div style="background='#ffffff'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method toTokens</strong> (line <span class="linenumber">541</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method toTokens</strong> (line <row class="linenumber">541</row>)
  </h4> 
 <h4><i>string[]</i> <strong>toTokens(
 [string
@@ -778,10 +781,10 @@ $string = null])</strong></h4>
 	<ul>
 			<li><strong>access</strong> - protected</li>
 		</ul>
-</div>
+</div>col-md-col-md-
 <a name="method__toString" id="method__toString"><!-- --></a>
 <div style="background='#eeeeee'"><h4>
-<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method __toString</strong> (line <span class="linenumber">187</span>)
+<img src="../../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method __toString</strong> (line <row class="linenumber">187</row>)
  </h4> 
 <h4><i>string</i> <strong>__toString(
 )</strong></h4>
@@ -795,7 +798,8 @@ $string = null])</strong></h4>
 			<li><strong>access</strong> - public</li>
 		</ul>
 </div>
-<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script>
+</div>
 <div class="tab-page" id="iVars">
 <h2 class="tab">Inherited Variables</h2>
 <script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
@@ -825,4 +829,4 @@ setupAllTabs();
 		Documentation generated on Fri, 12 Nov 2010 20:45:09 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</div>
 </body>
-</html>
+</html>

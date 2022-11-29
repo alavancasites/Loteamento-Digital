@@ -131,7 +131,7 @@ div.breadcrumbs
 	padding: 5px 20px;
 }
 
-div.breadcrumbs span
+div.breadcrumbs col-md-
 {
 	font-weight: bold;
 }
@@ -240,14 +240,14 @@ div.form .note
 	font-style: italic;
 }
 
-div.form span.required
+div.form col-md-.required
 {
 	color: red;
 }
 
 div.form div.error label,
 div.form label.error,
-div.form span.error
+div.form col-md-.error
 {
 	color: #C00;
 }
@@ -361,7 +361,7 @@ div.form.login p
 	margin: 0 0 10px 0;
 }
 
-div.form.gii .row.sticky .value, span.sticky
+div.form.gii .row.sticky .value, col-md-.sticky
 {
 	padding: 3px;
 	background: lightyellow;
@@ -465,7 +465,7 @@ div.form.gii div.success code
 	background: white;
 }
 
-div.form.gii pre.results span.error
+div.form.gii pre.results col-md-.error
 {
 	background: #FFE0E1;
 	color: black;
@@ -522,7 +522,7 @@ div.form.gii pre.results span.error
 	display: block;
 }
 
-#fancybox-wrap #tip7-title span
+#fancybox-wrap #tip7-title col-md-
 {
 	float: right;
 }

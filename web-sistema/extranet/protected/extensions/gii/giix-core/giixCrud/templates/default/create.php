@@ -12,12 +12,12 @@ $this->breadcrumbs[] = Yii::t(\'app\',\'Cadastrar\');
 ?>'?>
 
 <div class="row-fluid">
-  <div class="span12">
-      <div class="w-box">
-          <div class="w-box-header">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header">
             <h4><?='<?=Yii::t(\'app\',\'Cadastrar\');?>'?></h4>
           </div>
-          <div class="w-box-content">
+          <div class="card-body">
 			<?='<?php
 			$this->renderPartial(\'_form\', array(\'model\' => $model));
 			?>'?>

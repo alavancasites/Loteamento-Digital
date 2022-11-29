@@ -1,4 +1,4 @@
-// Spanish
+// col-md-ish
 plupload.addI18n({
 	'Select files' : 'Elija archivos:',
 	'Add files to the upload queue and click the start button.' : 'Agregue archivos a la cola de subida y haga click en el boton de iniciar.',

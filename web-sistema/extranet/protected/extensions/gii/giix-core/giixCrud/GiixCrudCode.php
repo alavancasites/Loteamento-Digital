@@ -89,14 +89,14 @@ class GiixCrudCode extends CrudCode {
 				));
 				echo $form->hiddenField($model, \''.$column->name.'\')';
 			}
-			return "echo \$form->dropDownList(\$model, '{$column->name}', GxHtml::listDataEx({$relatedModelClass}::model()->findAllAttributes(null, true)), array('class' => 'input-xxlarge','empty'=>'Selecione...'))";
+			return "echo \$form->dropDownList(\$model, '{$column->name}', GxHtml::listDataEx({$relatedModelClass}::model()->findAllAttributes(null, true)), array('class' => 'form-control','empty'=>'Selecione...'))";
 		}
 		
 		
 		if($column->size == 150){
 			Yii::import('ext.giix-core.giixModel.GiixModelCode'); 
 			$model_code = new GiixModelCode();	
-			return "echo \$form->dropDownList(\$model, '{$column->name}',\$model->get".$model_code->generateClassName($column->name)."Array(), array('class' => 'input-xxlarge','empty'=>'Selecione...'))";
+			return "echo \$form->dropDownList(\$model, '{$column->name}',\$model->get".$model_code->generateClassName($column->name)."Array(), array('class' => 'form-control','empty'=>'Selecione...'))";
 		}
 		
 		if (strtoupper($column->dbType) == 'TINYINT(1)'
@@ -135,7 +135,7 @@ class GiixCrudCode extends CrudCode {
 			)";
 		}
 		elseif (stripos($column->dbType, 'text') !== false) { // Start of CrudCode::generateActiveField code.
-			return "echo \$form->textArea(\$model, '{$column->name}',array('rows'=>'10','class'=>'input-xxlarge'))";
+			return "echo \$form->textArea(\$model, '{$column->name}',array('rows'=>'10','class'=>'form-control'))";
 		}
 		elseif (strtoupper($column->dbType) == 'BLOB') { 
 			return "\$this->widget('ext.imperavi-redactor-widget.ImperaviRedactorWidget',array(
@@ -164,9 +164,9 @@ class GiixCrudCode extends CrudCode {
 				$inputField='textField';
 
 			if ($column->type !== 'string' || $column->size === null || $inputField == 'fileField')
-				$field = "echo \$form->{$inputField}(\$model, '{$column->name}', array('class' => 'input-xxlarge'))";
+				$field = "echo \$form->{$inputField}(\$model, '{$column->name}', array('class' => 'form-control'))";
 			else
-				$field = "echo \$form->{$inputField}(\$model, '{$column->name}', array('maxlength' => {$column->size},'class' => 'input-xxlarge'))";
+				$field = "echo \$form->{$inputField}(\$model, '{$column->name}', array('maxlength' => {$column->size},'class' => 'form-control'))";
 			
 			return $field;
 			

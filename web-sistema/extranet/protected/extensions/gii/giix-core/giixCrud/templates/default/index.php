@@ -11,15 +11,15 @@ if($this->hasRel()){
 ?>'?>
 
 <div class="row-fluid">
-  <div class="span12">
-      <div class="w-box">
-          <div class="w-box-header">
-            <h4><?='<?=htmlentities($model->label(2));?>'?></h4>
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header">
+            <h4><?='<?=Util::formataTexto($model->label(2));?>'?></h4>
           </div>
-          <div class="w-box-content">
-            <div  class="w-box-content-busca">
+          <div class="card-body">
+            <div  class="card-body-busca">
 				<?='<? 
-                $this->renderPartial("//layouts/busca",array(
+                $this->renderPartial("//layouts/create",array(
                     \'button\' => (Yii::app()->user->obj->group->temPermissaoAction($this->id,\'create\')) ? Yii::t(\'app\',\'Cadastrar\').\' \'.$model->label() : NULL,
                     \'controller\' => $this->id,
                 ));
@@ -48,7 +48,7 @@ if($this->hasRel()){
 								?>'?>
 								<th>
                                 	<a class="btn-link" href="<?='<?php echo $this->createUrlRel(\'index\',array_merge($_GET,array(\'f\'=>$field,\'o\'=>$ordem)));?>'?>">
-										<i class="fa <?='<?=$icon;?>'?>"></i> <?='<?=htmlentities($model->getAttributeLabel($field));?>'?>
+										<i class="fa <?='<?=$icon;?>'?>"></i> <?='<?=Util::formataTexto($model->getAttributeLabel($field));?>'?>
                                     </a>
 								</th>
 								<?='<?

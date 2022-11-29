@@ -20,8 +20,8 @@ function ativaUploaderArquivos(class_ref,campo,patch){
 		
 		uploader.bind('Init', function(up, params) {
 			$('#'+campo).prepend(' \
-					<a id="'+campo+'_pickfiles" class="btn btn-upload span6">'+label_upload_btn+'</a><div class="clearfix"></div>\
-					<div class="progress span6" style="display:none; margin-top:10px;margin-left: 0px;"><div class="bar"></div></div><div class="clearfix"></div> \
+					<a id="'+campo+'_pickfiles" class="btn btn-upload col-md-6">'+label_upload_btn+'</a><div class="clearfix"></div>\
+					<div class="progress col-md-6" style="display:none; margin-top:10px;margin-left: 0px;"><div class="bar"></div></div><div class="clearfix"></div> \
 			');
 			
 			

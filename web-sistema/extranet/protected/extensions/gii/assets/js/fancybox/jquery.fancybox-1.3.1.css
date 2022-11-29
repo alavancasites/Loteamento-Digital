@@ -188,7 +188,7 @@
 	display: inline-block;
 }
 
-#fancybox-title-wrap span {
+#fancybox-title-wrap col-md- {
 	height: 32px;
 	float: left;
 }
@@ -261,11 +261,11 @@
 	visibility: visible;    /* IE6 */
 }
 
-#fancybox-left:hover span {
+#fancybox-left:hover col-md- {
 	left: 20px;
 }
 
-#fancybox-right:hover span {
+#fancybox-right:hover col-md- {
 	left: auto;
 	right: 20px;
 }

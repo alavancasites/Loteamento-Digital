@@ -34,8 +34,8 @@ RedactorPlugins.fullscreen = {
 
 			if (this.opts.iframe) html = this.get();
 
-			this.tmpspan = $('<span></span>');
-			this.$box.addClass('redactor_box_fullscreen').after(this.tmpspan);
+			this.tmpcol-md- = $('<span></span>');
+			this.$box.addClass('redactor_box_fullscreen').after(this.tmpcol-md-);
 
 			$('body, html').css('overflow', 'hidden');
 			$('body').prepend(this.$box);
@@ -62,7 +62,7 @@ RedactorPlugins.fullscreen = {
 			this.$box.removeClass('redactor_box_fullscreen').css({ width: 'auto', height: 'auto' });
 
 			if (this.opts.iframe) html = this.$editor.html();
-			this.tmpspan.after(this.$box).remove();
+			this.tmpcol-md-.after(this.$box).remove();
 
 			if (this.opts.iframe) this.fullscreenIframe(html);
 			else this.sync();

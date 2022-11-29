@@ -20,17 +20,17 @@
         switch(navigator.family){
         	case 'nn4':
         		// Nav 4.x code fork...
-				var oTable = document.layers["span" + Node];
+				var oTable = document.layers["col-md-" + Node];
 				var oImg = document.layers["img" + Node];
         		break;
         	case 'ie4':
         		// IE 4/5 code fork...
-				var oTable = document.all["span" + Node];
+				var oTable = document.all["col-md-" + Node];
 				var oImg = document.all["img" + Node];
         		break;
         	case 'gecko':
         		// Standards Compliant code fork...
-				var oTable = document.getElementById("span" + Node);
+				var oTable = document.getElementById("col-md-" + Node);
 				var oImg = document.getElementById("img" + Node);
         		break;
         }
@@ -42,17 +42,17 @@
         switch(navigator.family){
         	case 'nn4':
         		// Nav 4.x code fork...
-				var oTable = document.layers["span" + Node];
+				var oTable = document.layers["col-md-" + Node];
 				var oImg = document.layers["img" + Node];
         		break;
         	case 'ie4':
         		// IE 4/5 code fork...
-				var oTable = document.all["span" + Node];
+				var oTable = document.all["col-md-" + Node];
 				var oImg = document.all["img" + Node];
         		break;
         	case 'gecko':
         		// Standards Compliant code fork...
-				var oTable = document.getElementById("span" + Node);
+				var oTable = document.getElementById("col-md-" + Node);
 				var oImg = document.getElementById("img" + Node);
         		break;
         }
@@ -64,15 +64,15 @@
         switch(navigator.family){
         	case 'nn4':
         		// Nav 4.x code fork...
-				var oTable = document.layers["span" + Node];
+				var oTable = document.layers["col-md-" + Node];
         		break;
         	case 'ie4':
         		// IE 4/5 code fork...
-				var oTable = document.all["span" + Node];
+				var oTable = document.all["col-md-" + Node];
         		break;
         	case 'gecko':
         		// Standards Compliant code fork...
-				var oTable = document.getElementById("span" + Node);
+				var oTable = document.getElementById("col-md-" + Node);
         		break;
         }
 		return (oTable && oTable.style.display == "block");
@@ -87,7 +87,8 @@
 	}
 </script>
 <!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
-<body bgcolor="#ffffff" ><h2>File: /vendors/swiftMailer/classes/Swift/Attachment.php</h2>
+<body bgcolor="#ffffff" >
+<h2>File: /vendors/swiftMailer/classes/Swift/Attachment.php</h2>
 <div class="tab-pane" id="tabPane1">
 <script type="text/javascript">
 tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
@@ -161,4 +162,4 @@ setupAllTabs();
 		Documentation generated on Fri, 12 Nov 2010 20:45:15 +0000 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</div>
 </body>
-</html>
+</html>

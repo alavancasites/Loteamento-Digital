@@ -11,12 +11,12 @@ if($this->hasRel()){
 $this->breadcrumbs[] = Yii::t(\'app\',\'Visualizar\');
 ?>'?>
 <div class="row-fluid">
-  <div class="span12">
-      <div class="w-box">
-          <div class="w-box-header">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header">
             <h4>Visualizar</h4>
           </div>
-          <div class="w-box-content">
+          <div class="card-body">
           
 		  <?='<? 
           $this->renderPartial("//layouts/sucesso",array(
@@ -78,21 +78,21 @@ $this->breadcrumbs[] = Yii::t(\'app\',\'Visualizar\');
                   	<?='<?
                     if(Yii::app()->user->obj->group->temPermissaoAction($this->id,\'update\')){
                         ?>
-                        <a class="btn" href="<?php echo $this->createUrlRel(\'update\',array(\'id\'=>$model->'.$this->tableSchema->primaryKey.'));?>"><i class="icon-edit "></i> Editar</a>
+                        <a class="btn  btn-outline-primary" href="<?php echo $this->createUrlRel(\'update\',array(\'id\'=>$model->'.$this->tableSchema->primaryKey.'));?>"><i class="ion ion-md-create"></i> Editar</a>
                         <?
                     }
                     ?>          
                     <?
                     if(Yii::app()->user->obj->group->temPermissaoAction($this->id,\'index\')){
                         ?>
-                        <a class="btn" href="<?php echo $this->createUrlRel(\'index\');?>"><i class="icon-chevron-left"></i> Voltar</a>
+                        <a class="btn  btn-outline-primary" href="<?php echo $this->createUrlRel(\'index\');?>"><i class="icon-chevron-left"></i> Voltar</a>
                         <?
                     }
                     ?>
                     <?
                     if(Yii::app()->user->obj->group->temPermissaoAction($this->id,\'delete\')){
                         ?>
-                        <a class="btn btn-delete" href="<?php echo $this->createUrlRel(\'delete\',array(\'id\'=>$model->'.$this->tableSchema->primaryKey.'));?>" style="margin-left:30px;"><i class="icon-trash"></i> Excluir</a>
+                        <a class="btn  btn-outline-danger btn-delete" href="<?php echo $this->createUrlRel(\'delete\',array(\'id\'=>$model->'.$this->tableSchema->primaryKey.'));?>" style="margin-left:30px;"><i class="icon-trash"></i> Excluir</a>
                         <?
                     }
                     ?>'?>           
